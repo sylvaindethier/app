@@ -1,2 +1,3 @@
-# awesome
-This app is JUST awesome
+# app
+
+This app is awesome
