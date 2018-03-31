@@ -1,0 +1,50 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Awesome app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "ava",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylvaindethier/app.git"
+  },
+  "author":
+    "Sylvain Dethier <dethiersylvain@gmail.com> (https://sylvaindethier.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sylvaindethier/app/issues"
+  },
+  "homepage": "https://github.com/sylvaindethier/app#readme",
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "ava": "^1.0.0-beta.3",
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "extends": ["plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  }
+}
